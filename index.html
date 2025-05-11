@@ -4,19 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Prosty kalkulator paliwa online. Oblicz koszt podróży samochodem na podstawie trasy, spalania i ceny paliwa." />
+  
+  <!-- Meta tags for SEO -->
+  <meta name="description" content="Prosty kalkulator paliwa online. Oblicz koszt podróży samochodem na podstawie trasy, spalania i ceny paliwa. Idealny dla każdego kierowcy." />
+  <meta name="keywords" content="kalkulator paliwa, koszt podróży, oblicz paliwo, kalkulator samochodowy, paliwo, kalkulacja paliwa, podróże, oblicz koszt podróży" />
+  <meta name="robots" content="index, follow">
   <title>Kalkulator paliwa – Oblicz koszt podróży samochodem</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main>
     <h1>Kalkulator paliwa</h1>
-    <p>Oblicz koszt podróży samochodem</p>
+    <p>Oblicz koszt podróży samochodem na podstawie dystansu, spalania i ceny paliwa.</p>
     <form id="fuel-form">
-      <label>Dystans (km): <input type="number" id="distance" required /></label>
-      <label>Spalanie (l/100km): <input type="number" id="consumption" required /></label>
-      <label>Cena paliwa (zł/l): <input type="number" id="price" required step="0.01" /></label>
-      <label>Liczba osób w aucie: <input type="number" id="people" required min="1" value="1" /></label>
+      <label>Dystans (km): 
+        <input type="number" id="distance" required value="100" />
+      </label>
+      <label>Spalanie (l/100km): 
+        <input type="number" id="consumption" required step="any" value="7" />
+      </label>
+      <label>Cena paliwa (zł/l): 
+        <input type="number" id="price" required step="0.01" value="6.15" />
+      </label>
+      <label>Liczba osób w aucie: 
+        <input type="number" id="people" required min="1" value="1" />
+      </label>
       <button type="submit">Oblicz</button>
     </form>
     <div id="result" class="hidden"></div>
